@@ -1,5 +1,11 @@
 {
 	"github": {
 		"silent": true
-	}
+	},
+	"rewrites": [
+		{
+			"source": "/home/_next/:path*",
+			"destination": "/_next/:path*"
+		}
+	]
 }
