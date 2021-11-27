@@ -1,22 +1,30 @@
 {
-  "name": "garytou.com",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.0.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "@types/node": "16.11.10",
-    "@types/react": "17.0.37",
-    "eslint": "7",
-    "eslint-config-next": "12.0.4",
-    "typescript": "4.5.2"
-  }
+	"name": "garytou.com",
+	"author": "Gary Tou <gary@garytou.com> (https://garytou.com)",
+	"repository": "https://github.com/garyhtou/garytou.com.git",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"prettier": "@garyhtou/prettier-config",
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.36",
+		"@fortawesome/free-brands-svg-icons": "^5.15.4",
+		"@fortawesome/free-solid-svg-icons": "^5.15.4",
+		"@fortawesome/react-fontawesome": "^0.1.16",
+		"next": "12.0.4",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
+	},
+	"devDependencies": {
+		"@garyhtou/prettier-config": "^1.0.1",
+		"@types/node": "16.11.10",
+		"@types/react": "17.0.37",
+		"eslint": "7",
+		"eslint-config-next": "12.0.4",
+		"typescript": "4.5.2"
+	}
 }
