@@ -26,6 +26,103 @@ const Home: NextPage = () => {
 		},
 	];
 
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Gary Tou',
+		givenName: 'Gary',
+		familyName: 'Tou',
+		jobTitle: 'Software Engineer',
+		email: 'mailto:gary@garytou.com',
+		url: 'https://garytou.com',
+		image: 'https://assets.garytou.com/profile/GaryTou.jpg',
+		gender: 'male',
+		// hasOccupation: [
+		// 	{
+		// 		'@type': 'Occupation',
+		// 		name: 'Software Engineer',
+		// 		sameAs: 'https://en.wikipedia.org/wiki/Programmer',
+		// 	},
+		// ],
+		worksFor: {
+			'@type': 'Organization',
+			name: 'Hack Club',
+			url: 'https://hackclub.com',
+			sameAs: [
+				'https://hackclub.com',
+				'https://en.wikipedia.org/wiki/Hack_Club',
+				'https://hackclub.com/bank',
+			],
+		},
+		affiliation: [
+			{
+				'@type': 'Organization',
+				name: 'Hack Club',
+				url: 'https://hackclub.com',
+				sameAs: [
+					'https://hackclub.com',
+					'https://en.wikipedia.org/wiki/Hack_Club',
+					'https://hackclub.com/bank',
+				],
+			},
+			{
+				'@type': 'Organization',
+				name: 'synHacks',
+				url: 'https://synhacks.org',
+				sameAs: 'https://synhacks.org',
+			},
+			{
+				'@type': 'Organization',
+				name: 'Washington FBLA',
+				url: 'https://wafbla.org',
+				sameAs: 'https://wafbla.org/',
+			},
+			{
+				'@type': 'Organization',
+				name: 'FBLA-PBL',
+				url: 'https://fbla-pbl.org',
+				sameAs: [
+					'https://fbla-pbl.org',
+					'https://en.wikipedia.org/wiki/FBLA-PBL',
+				],
+			},
+			{
+				'@type': 'Organization',
+				name: 'TEDxYouth@Seattle',
+				url: 'https://tedxyouthseattle.com',
+				sameAs: 'https://tedxyouthseattle.com',
+			},
+			{
+				'@type': 'Organization',
+				name: 'DECA',
+				url: 'https://www.deca.org',
+				sameAs: [
+					'https://www.deca.org',
+					'https://en.wikipedia.org/wiki/DECA_(organization)',
+				],
+			},
+		],
+		alumniOf: [
+			{
+				'@type': 'EducationalOrganization',
+				name: 'Seattle University',
+				sameAs: 'https://www.seattleu.edu',
+			},
+			{
+				'@type': 'EducationalOrganization',
+				name: 'Hazen High School',
+				sameAs: 'https://hazen.rentonschools.us',
+			},
+		],
+		sameAs: [
+			'https://unsplash.com/@garyhtou',
+			'https://twitter.com/garyhtou',
+			'https://www.facebook.com/garyhtou/',
+			...socials.map((social) => social.link),
+		],
+		disambiguatingDescription: 'Gary Tou',
+	};
+
 	return (
 		<>
 			<Head>
@@ -41,6 +138,10 @@ const Home: NextPage = () => {
 					href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%7CRoboto+Slab%3A400%2C700&subset=latin%2Clatin-ext&ver=2.5.7'
 					rel='stylesheet'
 				/>
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+				></script>
 			</Head>
 
 			<div className={styles.container}>
@@ -55,7 +156,7 @@ const Home: NextPage = () => {
 					<div>
 						<h1>Gary Tou</h1>
 						<p className={styles.description}>
-							Hello 👋, I’m a college student studying{' '}
+							Hello 👋, I&apos;m a college student studying{' '}
 							<strong>Computer Science</strong> 👨&zwj;💻. I love anything
 							tech/business and work as a <strong>Software Engineer</strong> at{' '}
 							<a
