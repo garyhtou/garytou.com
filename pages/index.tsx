@@ -145,7 +145,7 @@ const Home: NextPage = () => {
 			</Head>
 
 			<div className={styles.container}>
-				<div className={styles.main}>
+				<main className={styles.main}>
 					{/* <Image
 						className={styles.garyTouPic}
 						src={GaryTouPic}
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
 						alt='Gary Tou'
 						priority
 					/> */}
-					<div>
+					<article>
 						<h1>Gary Tou</h1>
 						<p className={styles.description}>
 							Hello 👋, I&apos;m a college student studying{' '}
@@ -169,8 +169,8 @@ const Home: NextPage = () => {
 							building <strong>financial tools</strong> 🏦 to help students run
 							their own <strong>non-profits</strong>!
 						</p>
-					</div>
-					<div className={styles.links}>
+					</article>
+					<section className={styles.links}>
 						{socials.map((social) => (
 							<p key={social.name + '_' + social.link}>
 								<a href={social.link} target='_blank' rel='noreferrer'>
@@ -178,7 +178,7 @@ const Home: NextPage = () => {
 								</a>
 							</p>
 						))}
-					</div>
+					</section>
 					{/* <div className={styles.socials}>
 						<a
 							href='https://instagram.com/garyhtou'
@@ -188,7 +188,7 @@ const Home: NextPage = () => {
 							<FontAwesomeIcon icon={faInstagram} />
 						</a>
 					</div> */}
-				</div>
+				</main>
 			</div>
 		</>
 	);
