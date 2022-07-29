@@ -8,10 +8,10 @@ import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
 	const socials = [
-		{
-			name: 'Instagram',
-			link: 'https://instagram.com/garyhtou',
-		},
+		// {
+		// 	name: 'Instagram',
+		// 	link: 'https://instagram.com/garyhtou',
+		// },
 		{
 			name: 'Linkedin',
 			link: 'https://www.linkedin.com/in/gary-tou/',
