@@ -142,6 +142,13 @@ const Home: NextPage = () => {
 					type='application/ld+json'
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
 				></script>
+
+				<script
+					async
+					defer
+					data-website-id='97dfe447-36a1-495a-98e5-2321310ebfeb'
+					src='https://umami.garytou.com/umami.js'
+				></script>
 			</Head>
 
 			<div className={styles.container}>
