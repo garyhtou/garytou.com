@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 		// },
 		{
 			name: 'Linkedin',
-			link: 'https://www.linkedin.com/in/gary-tou/',
+			link: 'https://www.linkedin.com/in/garyhtou/',
 		},
 		{
 			name: 'GitHub',
