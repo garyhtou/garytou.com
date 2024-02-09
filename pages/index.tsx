@@ -8,10 +8,6 @@ import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
 	const socials = [
-		// {
-		// 	name: 'Instagram',
-		// 	link: 'https://instagram.com/garyhtou',
-		// },
 		{
 			name: 'Linkedin',
 			link: 'https://www.linkedin.com/in/garyhtou/',
@@ -32,7 +28,7 @@ const Home: NextPage = () => {
 		name: 'Gary Tou',
 		givenName: 'Gary',
 		familyName: 'Tou',
-		jobTitle: 'Software Engineer',
+		jobTitle: 'Engineering Manager',
 		email: 'mailto:gary@garytou.com',
 		url: 'https://garytou.com',
 		image: 'https://assets.garytou.com/profile/GaryTou.jpg',
@@ -51,7 +47,7 @@ const Home: NextPage = () => {
 			sameAs: [
 				'https://hackclub.com',
 				'https://en.wikipedia.org/wiki/Hack_Club',
-				'https://hackclub.com/bank',
+				'https://hackclub.com/hcb',
 			],
 		},
 		affiliation: [
@@ -123,13 +119,30 @@ const Home: NextPage = () => {
 		disambiguatingDescription: 'Gary Tou',
 	};
 
+	const SubtleLink = ({
+		href,
+		children,
+	}: {
+		href: string;
+		children: string;
+	}) => (
+		<a
+			href={href}
+			style={{ color: 'inherit', textDecoration: 'underline dotted' }}
+			target='_blank'
+			rel='noreferrer'
+		>
+			{children}
+		</a>
+	);
+
 	return (
 		<>
 			<Head>
 				<title>Gary Tou</title>
 				<meta
 					name='description'
-					content="Hello, I'm a college student studying Computer Science. I love anything tech/business and work as a Software Engineer at Hack Club!"
+					content="Hello, I use Ruby on Rails to invent Nonprofit Fiscal Sponsorship! Engineering Manager at Hack Club."
 				/>
 				<meta name='robots' content='index, follow' />
 				<link rel='canonical' href='https://garytou.com' />
@@ -140,7 +153,9 @@ const Home: NextPage = () => {
 				/>
 				<script
 					type='application/ld+json'
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(structuredData, null, 2),
+					}}
 				></script>
 
 				<script
@@ -153,28 +168,22 @@ const Home: NextPage = () => {
 
 			<div className={styles.container}>
 				<main className={styles.main}>
-					{/* <Image
-						className={styles.garyTouPic}
-						src={GaryTouPic}
-						layout='intrinsic'
-						alt='Gary Tou'
-						priority
-					/> */}
 					<article>
 						<h1>Gary Tou</h1>
 						<p className={styles.description}>
-							Hello 👋, I&apos;m a college student studying{' '}
-							<strong>Computer Science</strong> 👨&zwj;💻. I love anything
-							tech/business and work as a <strong>Software Engineer</strong> at{' '}
-							<a
-								href='https://hackclub.com/bank/'
-								target='_blank'
-								rel='noreferrer'
-							>
-								Hack Club
-							</a>{' '}
-							building <strong>financial tools</strong> 🏦 to help students run
-							their own <strong>non-profits</strong>!
+							Hello<span aria-hidden='true'> 👋</span>, I use{' '}
+							<SubtleLink href='https://rubyonrails.org/'>
+								Ruby on Rails
+							</SubtleLink>{' '}
+							to reinvent Nonprofit{' '}
+							<SubtleLink href='https://en.wikipedia.org/wiki/Fiscal_sponsorship'>
+								Fiscal Sponsorship
+							</SubtleLink>
+							! I love anything tech/business and work as a{' '}
+							<strong>Engineering Manager</strong> at{' '}
+							<SubtleLink href='https://hackclub.com/'>Hack Club</SubtleLink>{' '}
+							building <strong>financial tools</strong> 🏦 to help people run{' '}
+							<strong>non-profit</strong> organizations!
 						</p>
 					</article>
 					<section className={styles.links}>
@@ -186,15 +195,6 @@ const Home: NextPage = () => {
 							</p>
 						))}
 					</section>
-					{/* <div className={styles.socials}>
-						<a
-							href='https://instagram.com/garyhtou'
-							target='_blank'
-							rel='noreferrer'
-						>
-							<FontAwesomeIcon icon={faInstagram} />
-						</a>
-					</div> */}
 				</main>
 			</div>
 		</>
