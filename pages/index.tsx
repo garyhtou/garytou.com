@@ -179,11 +179,11 @@ const Home: NextPage = () => {
 							<SubtleLink href='https://en.wikipedia.org/wiki/Fiscal_sponsorship'>
 								Fiscal Sponsorship
 							</SubtleLink>
-							! I love anything tech/business and work as a{' '}
+							! I love anything tech/business and work as an{' '}
 							<strong>Engineering Manager</strong> at{' '}
 							<SubtleLink href='https://hackclub.com/'>Hack Club</SubtleLink>{' '}
 							building <strong>financial tools</strong> 🏦 to help people run{' '}
-							<strong>non-profit</strong> organizations!
+							<strong>nonprofit</strong> organizations!
 						</p>
 					</article>
 					<section className={styles.links}>
